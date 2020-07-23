@@ -17,14 +17,5 @@ client.on('message', message => {
   	}
 });
 
-bot.user.setPresence({
-    status: 'online',
-    activity: {
-        name: 'with Homer',
-        type: 'STREAMING',
-        url: 'https://www.twitch.tv/syndrome1337'
-    }
-});
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
