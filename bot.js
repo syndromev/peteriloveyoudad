@@ -11,5 +11,11 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === 'bye') {
+    	message.reply('Bye, also I like to destroy things.');
+  	}
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
