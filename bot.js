@@ -1,19 +1,14 @@
-import discord
-from discord.ext import commands
-import asyncio
-import random
-import datetime
-import aiohttp
-import requests
-import io
-import webbrowser
-import os
-from webserver import keep_alive
-from bs4 import BeautifulSoup as bs4
-from colorama import Fore
-import urllib.parse
+const Discord = require('discord.js');
 
-print ("Loading..")
+const client = new Discord.Client();
+
+ 
+
+client.on('ready', () => {
+
+    console.log('I am ready!');
+
+});
 
 bot = commands.Bot(command_prefix='x', self_bot=True)
 bot.remove_command("help")
