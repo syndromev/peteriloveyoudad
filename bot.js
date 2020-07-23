@@ -17,15 +17,13 @@ client.on('message', message => {
   	}
 });
 
-bot.on('ready', () => {
-    bot.user.setStatus('available')
-    bot.user.setPresence({
-        game: {
-            name: 'with Homer Simpson',
-            type: "STREAMING",
-            url: "https://www.twitch.tv/monstercat"
-        }
-    });
+bot.user.setPresence({
+    status: 'online',
+    activity: {
+        name: 'with Homer',
+        type: 'STREAMING',
+        url: 'https://www.twitch.tv/syndrome1337'
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
