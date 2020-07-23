@@ -11,5 +11,15 @@ client.on('message', message => {
   	}
 });
 
+
+@bot.command()
+async def dmall(ctx):
+  for member in ctx.guild.members:
+    try:
+      await member.send("msg")
+    except:
+      continue
+
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
