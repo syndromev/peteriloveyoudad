@@ -16,8 +16,7 @@ client.on('message', message => {
     	message.reply('Bye, also I like to destroy things.');
   	}
 });
-
-client.user.setActivity(“over family”, { type: “WATCHING” });
+client.user.setActivity('over family', { type: 'WATCHING' });
 
 
 // THIS  MUST  BE  THIS  WAY
