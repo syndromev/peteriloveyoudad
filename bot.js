@@ -17,9 +17,14 @@ client.on('message', message => {
   	}
 });
 
-Client.on('ready', async () => {
-   await client.user.setPresence({ game: { name: 'Watching my family' }, status: 'idle' });
-});
+static void UpdatePresence()
+{
+    DiscordRichPresence discordPresence;
+    memset(&discordPresence, 0, sizeof(discordPresence));
+    discordPresence.details = "♡";
+    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
+    Discord_UpdatePresence(&discordPresence);
+}
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
