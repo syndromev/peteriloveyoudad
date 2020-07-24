@@ -17,5 +17,16 @@ client.on('message', message => {
   	}
 });
 
+client.on("ready", () =>{
+    console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setPresence({
+        status: "idle",  //You can show online, idle....
+        game: {
+            name: "over family",  //The message shown
+            type: "WATCHING" //PLAYING: WATCHING: LISTENING: STREAMING:
+        }
+    });
+ });
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
